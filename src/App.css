@@ -1,22 +1,91 @@
-.App {
-  text-align: center;
+@keyframes spinner {
+    0% {
+        transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+    100% {
+        transform: translate3d(0, 0, 0) rotate(360deg);
+    }
 }
-
-.App-logo {
-  height: 40vmin;
+.singleIdea input, .singleIdea textarea {
+    outline:none;
+    background-color: transparent;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.singleIdea input {
+    text-overflow: ellipsis;
 }
-
-.App-link {
-  color: #09d3ac;
+.singleIdea textarea {
+    font-size: 0.8rem;
+}
+.singleIdea input::placeholder, .singleIdea textarea::placeholder {
+    color: rgba(255,255,255,0.5);
+}
+#root {
+    background-image: url("./images/bg.jpg");
+    min-height: 100vh;
+}
+.mainBlock {
+    background-color: rgba(255,255,255,0.7);
+}
+.singleIdea {
+    display: block;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+}
+.singleIdea input  {
+    border: none;
+    width: 90%;
+}
+.singleIdea textarea {
+    resize: none;
+    overflow: scroll;
+    border: none;
+    width: 100%;
+}
+.singleIdea input:focus, .singleIdea textarea:focus {
+    border: 1px solid lightgrey
+}
+.deleteIdea {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    color: white;
+    display: none;
+    cursor: pointer;
+    z-index: 88;
+}
+.singleIdea:hover > .deleteIdea {
+    display: block;
+}
+.bodyCharactersLimit {
+    font-size: 0.7rem;
+}
+.ideaFooter {
+    font-size: 0.8rem;
+}
+.PopUpInfo {
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+.spinner {
+    margin: 10px auto;
+    width: 30px;
+    height: 30px;
+    border: 3px solid black;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    animation: 2s linear infinite spinner;
+}
+.editIdeaLoadingWrapper {
+    background-color:rgba(255,255,255,0.5);
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 0px;
+    left: 0px;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

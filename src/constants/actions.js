@@ -1,0 +1,7 @@
+export const ADD_IDEA = "ADD_IDEA"
+export const EDIT_IDEA = "EDIT_IDEA"
+export const DELETE_IDEA = "DELETE_IDEA"
+export const SORT_IDEAS = "SORT_IDEAS"
+export const LOAD_IDEAS_FROM_SERVER = "LOAD_IDEAS_FROM_SERVER"
+export const SET_REQUEST_ERROR =  "SET_REQUEST_ERROR"
+export  const SET_UPDATE_SUCCESS = "SET_UPDATE_SUCCESS"
